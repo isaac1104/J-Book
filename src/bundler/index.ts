@@ -29,7 +29,6 @@ const bundle = async (rawCode: string) => {
       err: '',
     };
   } catch (err) {
-    console.log(err);
     return {
       code: '',
       err: err.message,
