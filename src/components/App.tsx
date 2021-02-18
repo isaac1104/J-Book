@@ -1,3 +1,4 @@
+import 'bulmaswatch/darkly/bulmaswatch.min.css';
 import * as esbuild from 'esbuild-wasm';
 import React, { useState, useEffect, useRef } from 'react';
 import { unpkgPathPlugin } from '../plugins/unpkg-path-plugin';
