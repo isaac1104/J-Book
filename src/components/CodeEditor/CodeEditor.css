@@ -1,3 +1,21 @@
+.editor-container {
+  position: relative;
+  height: 100%;
+}
+
+.editor-container .button-format {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.editor-container:hover .button-format {
+  opacity: 1;
+}
+
 .editor-container .mtk1 {
   color: #d4d4d4;
 }
