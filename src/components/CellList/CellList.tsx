@@ -16,7 +16,7 @@ const CellList: React.FC = () => {
           <CellListItem cell={cell} />
         </React.Fragment>
       ))}
-      <AddCell nextCellId={null} />
+      <AddCell forceVisible={cells.length === 0} nextCellId={null} />
     </div>
   );
 };
