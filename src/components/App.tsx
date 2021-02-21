@@ -1,12 +1,10 @@
 import 'bulmaswatch/darkly/bulmaswatch.min.css';
 import React from 'react';
-import TextEditor from './TextEditor';
-// import CodeCell from './CodeCell/CodeCell';
+import CellList from './CellList';
 
 const App = () => (
   <div>
-    {/* <CodeCell /> */}
-    <TextEditor />
+    <CellList />
   </div>
 );
 
