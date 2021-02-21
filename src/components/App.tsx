@@ -1,4 +1,3 @@
-import 'bulmaswatch/darkly/bulmaswatch.min.css';
 import React from 'react';
 import CellList from './CellList';
 
