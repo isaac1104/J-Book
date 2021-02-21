@@ -1,3 +1,4 @@
+import './CodeCell.css';
 import React, { useState, useEffect } from 'react';
 import CodeEditor from '../CodeEditor/CodeEditor';
 import Preview from '../Preview';
@@ -26,7 +27,7 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
 
   return (
     <Resizable direction='vertical'>
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'row' }}>
+      <div className='code-cell-container'>
         <Resizable direction='horizontal'>
           <CodeEditor
             initialValue={cell.content}

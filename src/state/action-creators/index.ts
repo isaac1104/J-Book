@@ -1,11 +1,10 @@
 import axios from 'axios';
 import { ActionType } from '../action-types';
 import {
-  Action,
   UpdateCellAction,
   DeleteCellAction,
   MoveCellAction,
-  InsertCellBeforeAction,
+  InsertCellAfterAction,
   Direction,
 } from '../actions';
 import { CellTypes } from '../cell';
@@ -31,11 +30,11 @@ export const moveCell = (id: string, direction: Direction): MoveCellAction => ({
   },
 });
 
-export const insertCellBefore = (
+export const insertCellAfter = (
   id: string | null,
   type: CellTypes
-): InsertCellBeforeAction => ({
-  type: ActionType.INSERT_CELL_BEFORE,
+): InsertCellAfterAction => ({
+  type: ActionType.INSERT_CELL_AFTER,
   payload: {
     id,
     type,
