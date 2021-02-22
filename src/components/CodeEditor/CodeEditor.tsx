@@ -64,6 +64,13 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         language='javascript'
         theme='vs-dark'
         height='100%'
+        loading={
+          <div className='spinner-container'>
+            <span className='icon fa-lg'>
+              <i className='fas fa-spinner fa-pulse fa-stack-2x' />
+            </span>
+          </div>
+        }
         options={{
           wordWrap: 'on',
           minimap: { enabled: false },
