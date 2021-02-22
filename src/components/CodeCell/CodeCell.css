@@ -3,3 +3,13 @@
   display: flex;
   flex-direction: row;
 }
+
+.progress-cover {
+  flex-grow: 1;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
