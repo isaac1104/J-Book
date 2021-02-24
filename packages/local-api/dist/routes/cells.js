@@ -41,14 +41,58 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createCellsRouter = void 0;
 var express_1 = __importDefault(require("express"));
+var promises_1 = __importDefault(require("fs/promises"));
+var path_1 = __importDefault(require("path"));
 var createCellsRouter = function (filename, dir) {
     var router = express_1.default.Router();
-    router.get('/cells', function (req, res) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
-    }); }); });
-    router.post('/cells', function (req, res) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
-        return [2 /*return*/];
-    }); }); });
+    router.use(express_1.default.json());
+    var fullPath = path_1.default.join(dir, filename);
+    router.get('/cells', function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
+        var result, err_1;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 6]);
+                    return [4 /*yield*/, promises_1.default.readFile(fullPath, { encoding: 'utf-8' })];
+                case 1:
+                    result = _a.sent();
+                    res.status(200).send(JSON.parse(result));
+                    return [3 /*break*/, 6];
+                case 2:
+                    err_1 = _a.sent();
+                    if (!(err_1.code === 'ENOENT')) return [3 /*break*/, 4];
+                    return [4 /*yield*/, promises_1.default.writeFile(fullPath, '[]', 'utf-8')];
+                case 3:
+                    _a.sent();
+                    res.status(200).send([]);
+                    return [3 /*break*/, 5];
+                case 4: throw err_1;
+                case 5: return [3 /*break*/, 6];
+                case 6: return [2 /*return*/];
+            }
+        });
+    }); });
+    router.post('/cells', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+        var cells, err_2;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    cells = req.body.cells;
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 3, , 4]);
+                    return [4 /*yield*/, promises_1.default.writeFile(fullPath, JSON.stringify(cells), 'utf-8')];
+                case 2:
+                    _a.sent();
+                    res.status(201).send({ status: 'ok' });
+                    return [3 /*break*/, 4];
+                case 3:
+                    err_2 = _a.sent();
+                    throw err_2;
+                case 4: return [2 /*return*/];
+            }
+        });
+    }); });
     return router;
 };
 exports.createCellsRouter = createCellsRouter;
