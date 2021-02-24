@@ -15,7 +15,7 @@ export const serveCommand = new Command()
         parseInt(options.port),
         path.basename(filename),
         dir,
-        isProduction
+        !isProduction
       );
       console.log(
         `Opened ${filename}. Nagivate to http://localhost:${options.port}`
