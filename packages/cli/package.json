@@ -1,5 +1,5 @@
 {
-  "name": "j-book",
+  "name": "@isaac1104/j-book",
   "version": "1.0.0",
   "description": "",
   "bin": "dist/index.js",
@@ -25,5 +25,6 @@
     "commander": "^7.1.0",
     "esbuild": "0.8.26",
     "typescript": "^4.1.5"
-  }
+  },
+  "gitHead": "831a0da1dbf3a014553de45f17cf6c2512489b6d"
 }
