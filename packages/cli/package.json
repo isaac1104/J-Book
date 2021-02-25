@@ -1,5 +1,5 @@
 {
-  "name": "@isaac1104/j-book",
+  "name": "j-book-isaac1104",
   "version": "1.0.0",
   "description": "",
   "bin": "dist/index.js",
