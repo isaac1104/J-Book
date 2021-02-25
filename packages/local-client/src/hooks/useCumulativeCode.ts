@@ -24,19 +24,19 @@ export const useCumulativeCode = (cellId: string) => {
   `;
     const showFuncNoop = 'var show = () => {}';
 
-    const cumulative = [];
+    const cumulativeCode = [];
     for (let c of orderedCells) {
       if (c.type === 'code') {
         if (c.id === cellId) {
-          cumulative.push(showFunc);
+          cumulativeCode.push(showFunc);
         } else {
-          cumulative.push(showFuncNoop);
+          cumulativeCode.push(showFuncNoop);
         }
-        cumulative.push(c.content);
+        cumulativeCode.push(c.content);
       }
       if (c.id === cellId) break;
     }
 
-    return cumulative;
+    return cumulativeCode;
   }).join('\n');
 };
