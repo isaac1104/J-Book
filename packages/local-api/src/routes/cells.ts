@@ -12,7 +12,7 @@ export const createCellsRouter = (filename: string, dir: string) => {
   const router = express.Router();
   router.use(express.json());
   const fullPath = path.join(dir, filename);
-
+  console.log(fullPath);
   router.get('/cells', async (_req, res) => {
     try {
       const result = await fs.readFile(fullPath, { encoding: 'utf-8' });

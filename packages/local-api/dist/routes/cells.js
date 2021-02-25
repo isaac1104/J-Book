@@ -47,6 +47,7 @@ var createCellsRouter = function (filename, dir) {
     var router = express_1.default.Router();
     router.use(express_1.default.json());
     var fullPath = path_1.default.join(dir, filename);
+    console.log(fullPath);
     router.get('/cells', function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
         var result, err_1;
         return __generator(this, function (_a) {

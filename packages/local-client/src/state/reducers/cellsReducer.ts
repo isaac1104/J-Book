@@ -32,7 +32,7 @@ const cellsReducer = produce(
       case ActionType.FETCH_CELLS_COMPLETE:
         state.order = action.payload.map(({ id }) => id);
         state.data = action.payload.reduce((acc, curr) => {
-          acc[curr.id] = cell;
+          acc[curr.id] = curr;
           return acc;
         }, {} as CellsState['data']);
         state.loading = false;
