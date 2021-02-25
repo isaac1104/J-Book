@@ -20,7 +20,7 @@ J-Book is an in-browser documentation &amp; code editor built with React, Redux,
 
 ## 🌎 Starting the app
 
-Simply run the following command and navigate to http://localhost:4005 once installtation is finished.
+Simply run the following command and navigate to http://localhost:4005 once the installation is finished.
 
 ```
 npx @isaac1104/j-book serve
