@@ -4,7 +4,7 @@
 
 ## About This App
 
-J-Book is an in-browser documentation &amp; code editor built with React, Redux, Typescript, Node &amp; Express. You can quickly prototype your code and add notes/documentations to go along with your code. You can also import many popular npm packages such as React, Axios and Lodash.
+J-Book is an in-browser documentation &amp; code editor built with React, Redux, Typescript, Node &amp; Express. You can quickly prototype your code and add notes/documentations to go along with your code. You can also import many popular npm packages such as react, axios and lodash inside the code editor.
 
 ## 💻 Tech Stack
 
