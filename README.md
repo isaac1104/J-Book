@@ -18,7 +18,7 @@ J-Book is an in-browser documentation &amp; code editor built with React, Redux,
 
 ```
 
-## 💻 Starting the app 
+## 🌎 Starting the app 
 
 Start by installing npm packages. While in the root directory, run the following commands:
 
